@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OyO-bR-GlT">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapScreen" customModule="User_Location" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-Wh-sat">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="l1g-XO-4Yb"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Fl3-Wh-sat" secondAttribute="bottom" id="Pi0-79-Uwe"/>
+                            <constraint firstItem="Fl3-Wh-sat" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eGI-8Z-s0H"/>
+                            <constraint firstAttribute="trailing" secondItem="Fl3-Wh-sat" secondAttribute="trailing" id="jKq-tU-NpP"/>
+                            <constraint firstItem="Fl3-Wh-sat" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pjd-2Q-tUc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Fl3-Wh-sat" id="qA4-9W-BtK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="125"/>
+        </scene>
+        <!--View Controller Start-->
+        <scene sceneID="aKw-5O-WCE">
+            <objects>
+                <viewController id="OyO-bR-GlT" customClass="ViewControllerStart" customModule="User_Location" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cik-wU-52t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfw-SU-U9j">
+                                <rect key="frame" x="65" y="388.66666666666669" width="245" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Click Here To Connect Wallet"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="uhN-kI-cG7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M9V-zf-Pca"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pfw-SU-U9j" firstAttribute="centerY" secondItem="Cik-wU-52t" secondAttribute="centerY" id="Xdh-bP-hAh"/>
+                            <constraint firstItem="pfw-SU-U9j" firstAttribute="centerX" secondItem="Cik-wU-52t" secondAttribute="centerX" id="s92-NC-kkj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ma1-jF-Bj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
